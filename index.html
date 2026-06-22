@@ -1,0 +1,145 @@
+<!--doctype, language, title and heading below-->
+<!DOCTYPE html>
+    <html lang="en">
+    <title>ONUH JOSEPH OMAJI</title>
+<div class="content">   
+    <div class="card">   
+        <style>
+        body{
+            margin:0;
+            padding:0;
+            background:#f4f4f4;
+            font-family: Arial, sans-serif;
+
+
+        /* Card */
+        .card{
+            width:80%;
+            margin:80px auto;
+            border:1px solid #ccc;
+            border-radius:5px;
+            padding:20px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            font-size:35px;
+            margin-bottom:20px;
+        }
+
+        h2{
+            margin-bottom:5px;
+        }
+
+        p{
+            font-size:16px;
+            color:#333;
+        }
+
+        button{
+            background:#66c7f2;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+    </style>
+        <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+            <style>
+            h1{
+                text-align:center;
+            }
+            </style>                
+        <head>
+            <meta charset="UTF-8">
+            <h1>JOSEPH GLOBAL FOUNDATION</h1>
+            </head>
+            
+            <!--section of my school details -->
+            <body>
+                <section>
+
+                My name is ONUH JOSEPH OMAJI.<br>
+                I am a student of Computer science Department<br>
+                My matriculation Number is: UJ/2024/NS/0302<br>
+                I am in 200 level
+
+            </section>
+
+            <!--section of what the web page is about -->
+            <section>
+
+                <h2>About This Page</h2>
+
+                This static webpage was created by me, as my INS 205 assignment.</br>
+                seeks to demonstrates my understanding of HTML5 and CSS.
+
+            </section>
+
+            <!-- section containing additional details about me: the things i like to do -->
+            <section>
+
+                <h2>I like to:</h2>
+
+                <ul>
+
+                <li>Do Graphic Designs</li>
+                <li>Watch Movies</li>
+                <li>Hangout with frineds</li>
+                <li>Be engaged in objective discussions and arguments</li>
+
+                </ul>
+
+            </section>
+
+            <!--how to contact me -->
+            <section>
+
+                <h2>Contact Me</h2>
+                <a href="mailto:2024ns0302@unijos.edu.ng">
+                <button id="send-btn">
+                Send Email
+                </button>
+                </a>
+
+            </section>
+
+            <!--java script-->
+        <script>
+                /* -------------------------------------------------------
+                Matric-number → button colour
+                Replace the matric value below with your own number.
+                ------------------------------------------------------- */
+                const matric = "UJ/2024/NS/0302"; // <-- CHANGE THIS TO YOUR MAT. NO.
+
+            /* CHANGE NOTHING BEYOND THIS POINT - CHANGE NOTHING BEYOND THIS POINT */ 
+
+                function hashString(str) {
+                    let hash = 0;
+                    for (let i = 0; i < str.length; i++) {
+                        hash = (hash * 31 + str.charCodeAt(i)) >>> 0;
+                    }
+                    return hash;
+                }
+
+                // Normalise input
+                const normalised = matric.trim().toUpperCase();
+
+                // Map the hash to a hue value between 0 and 359 degrees
+                const hue = hashString(normalised) % 360;
+
+                // Build an HSL colour: fixed saturation & lightness, varying hue
+                const buttonColour = `hsl(${hue}, 65%, 45%)`;
+
+                // Apply the colour to the Send Email button
+                document.getElementById("send-btn").style.background = buttonColour;
+            </script>
+         </body>
+     </div>
+    </div>   
+</html>
